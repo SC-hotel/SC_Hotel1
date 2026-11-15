@@ -1,0 +1,52 @@
+$(document).ready(function(){
+    console.log("Chat JS loaded");
+    
+    // Ensure chat window is hidden initially
+    $('#chat-window').hide();
+    
+    $('#chat-toggle').click(function(){
+        console.log("Toggle clicked");
+        $('#chat-window').toggle();
+    });
+    
+    $('#chat-close').click(function(){
+        $('#chat-window').hide();
+    });
+    
+    $('#send-btn').click(function(){
+        let msg = $('#chat-input').val().trim();
+        if(msg === "") return;
+        
+        $('#chat-messages').append('<div class="user-msg"><strong>You:</strong> ' + escapeHtml(msg) + '</div>');
+        $('#chat-input').val('');
+        $('#chat-messages').scrollTop($('#chat-messages')[0].scrollHeight);
+        
+        $.ajax({
+            url: 'chatbot_handler.php',
+            type: 'POST',
+            data: { message: msg },
+            dataType: 'json',
+            success: function(res){
+                $('#chat-messages').append('<div class="bot-msg"><strong>AI:</strong> ' + escapeHtml(res.reply) + '</div>');
+                $('#chat-messages').scrollTop($('#chat-messages')[0].scrollHeight);
+            },
+            error: function(xhr, status, error){
+                console.error("AJAX Error:", error);
+                $('#chat-messages').append('<div class="bot-msg"><strong>AI:</strong> Sorry, I\'m having trouble. Please try again.</div>');
+            }
+        });
+    });
+    
+    $('#chat-input').keypress(function(e){
+        if(e.which == 13) $('#send-btn').click();
+    });
+    
+    function escapeHtml(str) {
+        return str.replace(/[&<>]/g, function(m) {
+            if(m === '&') return '&amp;';
+            if(m === '<') return '&lt;';
+            if(m === '>') return '&gt;';
+            return m;
+        });
+    }
+});

@@ -1,0 +1,9 @@
+<Files "assistant.php">
+    SecRuleEngine Off
+</Files>
+
+# Alternative approach – disable only for POST requests
+<IfModule mod_security.c>
+    SecFilterEngine Off
+    SecFilterScanPOST Off
+</IfModule>
