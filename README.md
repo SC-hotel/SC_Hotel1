@@ -94,8 +94,6 @@ The repository's commit history provides a record of committed updates and modif
 Information Technology Graduate
 
 - GitHub: https://github.com/kenneth353
-- Portfolio: https://portfolio14-mu.vercel.app
-
 ---
 
 **Project Name:** SC Hotel AI Booking System  
