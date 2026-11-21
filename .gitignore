@@ -1,3 +1,14 @@
 # Sensitive configuration files
 includes/config.php
 config.php
+
+# Private user uploads
+/assets/uploads/id_docs/
+/assets/uploads/selfies/
+/assets/uploads/profiles/
+
+# Sensitive configuration
+/includes/config.php
+
+# Temporary and backup files
+*.bak
