@@ -37,6 +37,7 @@ The system also includes administrative features for managing bookings, rooms, u
 | MySQL | Database management |
 | PHPMailer | Email functionality |
 | AI API | AI chat assistant |
+| Face++ API | Face Match Verification |
 | Git | Version control |
 | GitHub | Source code hosting |
 
