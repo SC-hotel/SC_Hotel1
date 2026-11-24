@@ -12,7 +12,7 @@ The system also includes administrative features for managing bookings, rooms, u
 ## Live Application
 
 - **Live Website:** https://schotel.kesug.com/
-- **GitHub Repository:** https://github.com/kenneth353/SC_Hotel1
+- **GitHub Repository:** https://github.com/SC-hotel/SC_Hotel1
 
 ## Features
 
@@ -55,7 +55,7 @@ The system also includes administrative features for managing bookings, rooms, u
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kenneth353/SC_Hotel1.git
+   git clone https://github.com/SC-hotel/SC_Hotel1.git
    ```
 
 2. Place the project folder inside the XAMPP `htdocs` directory.
@@ -89,11 +89,11 @@ The repository's commit history provides a record of committed updates and modif
 
 ## Developer
 
-**Kenneth Baronda**
+**Kim ryan Ventillo**
 
 Information Technology Graduate
 
-- GitHub: https://github.com/kenneth353
+- GitHub: https://github.com/SC-hotel
 ---
 
 **Project Name:** SC Hotel AI Booking System  
